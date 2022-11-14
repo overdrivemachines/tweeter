@@ -1,11 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Twitter clone on Rails 7
 
-Things you may want to cover:
+Following Youtube Guide: https://www.youtube.com/watch?v=loYfUpwoLlM
 
-* Ruby version
+Using Template: Kickoff Tailwind - https://github.com/justalever/kickoff_tailwind
+
+
+# Versions
+- ruby 3.1.2p20
+- Rails 7.0.4
 
 * System dependencies
 
@@ -22,3 +26,5 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+# References
