@@ -32,6 +32,9 @@ end
 group :development do
   gem 'web-console'
   # gem "rack-mini-profiler"
+  gem 'annotate'
+  gem 'faker'
+  gem 'rails-erd'
 end
 
 group :test do
