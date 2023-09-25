@@ -35,6 +35,7 @@ group :development do
   gem 'annotate'
   gem 'faker'
   gem 'rails-erd'
+  gem "chusaku", require: false
 end
 
 group :test do
