@@ -40,3 +40,5 @@ If bin/dev does not work, try running:
 - ...
 
 # References
+
+- Rubocop: https://github.com/colinsoleim/react-on-rails-template/blob/main/.rubocop.yml
