@@ -1,12 +1,1 @@
-<%= form_with model: @tweet do |form| %>
-  <% if form.object.errors.any? %>
-    <div class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3 mx-3">
-      <h2><%= pluralize(form.object.errors.count, "error") %> prohibited this tweet from being saved</h2>
-      <ul>
-        <% form.object.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-<% end %>
+<%= render "form" %>

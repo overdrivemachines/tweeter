@@ -1,0 +1,16 @@
+<%= form_with model: @tweet do |form| %>
+  <% if form.object.errors.any? %>
+    <div class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3 mx-3">
+      <h2><%= pluralize(form.object.errors.count, "error") %> prohibited this tweet from being saved</h2>
+      <ul>
+        <% form.object.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <%= form.text_area :body, class: new_tweet_textarea_class, placeholder: "What's on your mind?" %>
+  <div class="flex justify-end px-6 mt-20">
+    <%= form.submit "Tweet", class: new_tweet_button_class %>
+  </div>
+<% end %>
