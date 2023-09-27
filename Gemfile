@@ -27,19 +27,21 @@ gem 'stripe'
 
 group :development, :test do
   gem 'debug', platforms: %i[mri mingw x64_mingw]
+  gem 'factory_bot_rails'
+  gem 'faker'
 end
 
 group :development do
   gem 'web-console'
   # gem "rack-mini-profiler"
   gem 'annotate'
-  gem 'faker'
+  gem 'chusaku', require: false
   gem 'rails-erd'
-  gem "chusaku", require: false
 end
 
 group :test do
   gem 'capybara'
+  gem 'rspec-rails'
   gem 'selenium-webdriver'
   gem 'webdrivers'
 end
