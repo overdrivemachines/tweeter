@@ -1,4 +1,6 @@
 class TweetsController < ApplicationController
+  before_action :authenticate_user!
+
   # @route GET /tweets (tweets)
   # @route GET / (root)
   def index
@@ -9,6 +11,7 @@ class TweetsController < ApplicationController
   # @route POST /tweets (tweets)
   def create
     @tweet = Tweet.new(tweet_params)
+    @tweet.user = current_user
     respond_to do |format|
       if @tweet.save
         format.turbo_stream
