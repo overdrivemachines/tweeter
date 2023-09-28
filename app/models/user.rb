@@ -25,4 +25,8 @@ class User < ApplicationRecord
   has_many :tweets
 
   validates_uniqueness_of :username
+
+  def full_name
+    "#{first_name} #{last_name}"
+  end
 end
