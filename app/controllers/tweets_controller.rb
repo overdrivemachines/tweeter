@@ -5,7 +5,7 @@ class TweetsController < ApplicationController
   # @route GET / (root)
   def index
     @tweet = Tweet.new
-    @tweets = Tweet.order(created_at: :asc)
+    @tweets = Tweet.order(created_at: :desc)
   end
 
   # @route POST /tweets (tweets)
