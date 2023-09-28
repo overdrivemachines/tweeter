@@ -17,7 +17,17 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  it 'can run tests' do
-    expect(false).to be(true)
+  it "returns the full_name for a user" do
+    user = FactoryBot.create(:user)
+
+    expect(user.full_name).to eq("#{user.first_name} #{user.last_name}")
+  end
+
+  it "does not allow users to have the same usernames" do
+    user = FactoryBot.create(:user)
+    user3 = FactoryBot.build(:user3, username: user.username)
+
+    expect(user3).not_to be_valid
+    expect(user3.errors[:username]).to include("has already been taken")
   end
 end
